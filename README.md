@@ -19,3 +19,28 @@ section Bセクション
 将来タスク           :         des3, after des1, 5d
 将来タスク 2         :         des4, after des3, 5d
 ```
+
+```mermaid
+gantt
+    食堂を使ったイベント :crit ,2023-04-22
+    食堂を使ったイベント :crit ,2023-8
+    千葉市化学フェスタ   :crit ,2023-10
+    サイエンスアゴラ     :crit ,2023-11
+    文化祭,11月,大学生   :crit ,2023-11
+    食堂を使ったイベント :crit ,2023-12
+    バルシューレ         :crit ,2024-3
+    ブラインドサッカー   :crit ,2024-3
+```
+
+```mermaid
+gitGraph
+       commit
+       commit
+       branch develop
+       commit
+       commit
+       commit
+       checkout main
+       commit
+       commit
+```
