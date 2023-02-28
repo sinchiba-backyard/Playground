@@ -3,6 +3,7 @@
 
 - [レの遊び場](レの遊び場.md)
 
+```mermaid
 gantt
 dateFormat  YYYY-MM-DD
 title Gantt チャート
@@ -17,3 +18,4 @@ section Bセクション
 完了タスク           :done,    des1, 2022-01-06,2022-01-08
 将来タスク           :         des3, after des1, 5d
 将来タスク 2         :         des4, after des3, 5d
+```
