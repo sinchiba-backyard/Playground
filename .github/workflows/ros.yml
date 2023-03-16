@@ -21,8 +21,9 @@ jobs:
       - name: Install Libraries
         run: ros install dexador quri jonathan
       - name: Run tests
-        run: pwd
-        run: ls -l
+        run: |
+          pwd
+          ls -l
       - name: Run tests
         run: |
           PATH="~/bin:~/.roswell/bin:$PATH"
