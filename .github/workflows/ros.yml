@@ -20,12 +20,13 @@ jobs:
           curl -L https://raw.githubusercontent.com/roswell/roswell/master/scripts/install-for-ci.sh | sh
       - name: Install Libraries
         run: ros install dexador quri jonathan
-      - name: Run tests
+      - name: print working directory tests
         run: |
           pwd
+          echo $HOME
           ls -l
       - name: Run tests
         run: |
-          PATH="~/bin:~/.roswell/bin:$PATH"
-          post-rawls.ros
+          PATH="~/.roswell/bin:$PATH"
+          ./bin/post-rawls.ros
 
