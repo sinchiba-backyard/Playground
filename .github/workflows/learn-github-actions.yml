@@ -11,7 +11,9 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: |
-        pwd
-        git status
-        ls -1
+      - name: get diff
+        run: |
+          git diff HEAD~1 | grep ^diff | cut -f3 -d\  | cut -c 3- > ./diff.txt
+          pwd
+          git status
+          ls -1
