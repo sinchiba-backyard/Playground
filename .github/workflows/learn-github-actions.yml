@@ -13,7 +13,9 @@ jobs:
       - run: bats -v
       - name: get diff
         run: |
-          git diff HEAD~1 | grep ^diff | cut -f3 -d\  | cut -c 3- > ./diff.txt
+          git diff HEAD~1 . | grep ^diff | cut -f3 -d\  | cut -c 3- > ./diff.txt
+          echo $HOME
+          git diff 
           pwd
           git status
           ls -1
