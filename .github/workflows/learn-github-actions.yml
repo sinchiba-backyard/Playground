@@ -16,7 +16,9 @@ jobs:
           git diff HEAD~1 . | grep ^diff | cut -f3 -d\  | cut -c 3- > ./diff.txt
           echo $HOME
           git log
-          ehco "======================"
+          echo "======================"
+          git remote -v
+          echo "======================"
           git diff 
           pwd
           git status
