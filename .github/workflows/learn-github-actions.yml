@@ -13,10 +13,13 @@ jobs:
       - run: bats -v
       - name: get diff
         run: |
-          git diff HEAD~1 . | grep ^diff | cut -f3 -d\  | cut -c 3- > ./diff.txt
+          git diff --name-status HEAD^
           echo $HOME
+          git pull 
           git log
+          git diff --name-status HEAD^
           echo "======================"
+          git branch
           git remote -v
           echo "======================"
           git diff 
