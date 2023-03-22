@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 2
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
@@ -16,15 +16,3 @@ jobs:
       - name: get diff
         run: |
           git diff --name-status HEAD^
-          echo $HOME
-          git pull 
-          git log
-          git diff --name-status HEAD^
-          echo "======================"
-          git branch
-          git remote -v
-          echo "======================"
-          git diff 
-          pwd
-          git status
-          ls -1
